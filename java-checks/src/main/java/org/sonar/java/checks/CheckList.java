@@ -54,6 +54,7 @@ import org.sonar.java.checks.security.HostnameVerifierImplementationCheck;
 import org.sonar.java.checks.security.IntegerToHexStringCheck;
 import org.sonar.java.checks.security.LDAPAuthenticatedConnectionCheck;
 import org.sonar.java.checks.security.LDAPDeserializationCheck;
+import org.sonar.java.checks.security.RegexHotspotCheck;
 import org.sonar.java.checks.security.SMTPSSLServerIdentityCheck;
 import org.sonar.java.checks.security.SecureCookieCheck;
 import org.sonar.java.checks.security.SecureXmlTransformerCheck;
@@ -120,6 +121,7 @@ import org.sonar.java.se.checks.DivisionByZeroCheck;
 import org.sonar.java.se.checks.InvariantReturnCheck;
 import org.sonar.java.se.checks.LocksNotUnlockedCheck;
 import org.sonar.java.se.checks.MapComputeIfAbsentOrPresentCheck;
+import org.sonar.java.se.checks.MinMaxRangeCheck;
 import org.sonar.java.se.checks.NoWayOutLoopCheck;
 import org.sonar.java.se.checks.NonNullSetToNullCheck;
 import org.sonar.java.se.checks.NullDereferenceCheck;
@@ -433,6 +435,7 @@ public final class CheckList {
       .add(SynchronizedFieldAssignmentCheck.class)
       .add(NullDereferenceCheck.class)
       .add(InvariantReturnCheck.class)
+      .add(MinMaxRangeCheck.class)
       .add(ConditionalUnreachableCodeCheck.class)
       .add(UnclosedResourcesCheck.class)
       .add(CustomUnclosedResourcesCheck.class)
@@ -618,6 +621,7 @@ public final class CheckList {
       .add(GetClassLoaderCheck.class)
       .add(ObjectOutputStreamCheck.class)
       .add(VolatileVariablesOperationsCheck.class)
+      .add(RegexHotspotCheck.class)
       .build();
   }
 
